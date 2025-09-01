@@ -1,0 +1,11 @@
+.flex-50 {
+  height: calc(100vh - 100px);
+}
+
+.first-wrap,
+.second-wrap {
+  height: auto;
+  max-height: 50%;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+}

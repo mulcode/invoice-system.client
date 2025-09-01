@@ -1,0 +1,49 @@
+<input type="file" (change)="onFileSelect($event)" class="display-none m-2" />
+<div>
+  <table class="table table-bordered table-striped mt-2">
+    <thead>
+      <tr>
+        <th>Block</th>
+        <th>Lift</th>
+        <th>Post Code</th>
+        <th>Loc</th>
+        <th>Part Code</th>
+        <th>Description</th>
+        <th>Part Rate</th>
+        <th>Invoice Number</th>
+        <th>Replace Date</th>
+        <th>Part Loc</th>
+        <th>Part Quantity</th>
+        <th>Part Discount</th>
+        <th>Rate Adjust</th>
+        <th>Rebate</th>
+        <th>Term Type</th>
+        <th>Invoice Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of invoiceDetails">
+        <td class="border-1">{{ p.block }}</td>
+        <td class="border-1">{{ p.lift }}</td>
+        <td class="border-1">{{ p.partCode }}</td>
+        <td class="border-1">{{ p.loc }}</td>
+        <td class="border-1">{{ p.partCode }}</td>
+        <td class="border-1">{{ p.description }}</td>
+        <td class="border-1">{{ p.partRate }}</td>
+        <td class="border-1">{{ p.invoiceNumber }}</td>
+        <td class="border-1">{{ p.replaceDate }}</td>
+        <td class="border-1">{{ p.partLoc }}</td>
+        <td class="border-1">{{ p.partQuantity }}</td>
+        <td class="border-1">{{ p.partDiscount }}</td>
+        <td class="border-1">{{ p.rateAdjust }}</td>
+        <td class="border-1">{{ p.rebate }}</td>
+        <td class="border-1">{{ p.termType }}</td>
+        <td class="border-1">{{ p.invoiceDate }}</td>
+        <td class="border-1">{{ p.isDuplicate ? "Duplicate" : "Ok" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button class="btn btn-primary mt-2" (click)="uploadFile()">Upload</button>

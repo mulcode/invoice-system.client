@@ -1,0 +1,57 @@
+<div class="flex flex-column flex-50">
+  <div class="first-wrap">
+    <table class="table">
+      <tr>
+        <th>Invoice Number</th>
+        <th>Total Amount</th>
+        <th>Final Amount</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let header of invoiceHeaders" (click)="headerByInvoiceNumber(header.invoiceNumber)">
+        <td>{{header.invoiceNumber}}</td>
+        <td>{{header.totalAmount}}</td>
+        <td>{{header.finalAmount}}</td>
+        <td class="p-2">
+          <button class="m-2 btn btn-success" type="button">Check</button>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="second-wrap">
+    <table class="table">
+      <tr class="tbRow">
+        <th>Part Code</th>
+        <th>Description</th>
+        <th>Part Rate</th>
+        <th>Invoice Number</th>
+        <th>Replace Date</th>
+        <th>Part Loc</th>
+        <th>Part Quantity</th>
+        <th>Part Discount</th>
+        <th>Rate Adjust</th>
+        <th>Rebate</th>
+        <th>Term Type</th>
+        <th>Invoice Date</th>
+        <th>Company Name</th>
+      </tr>
+      <tr *ngFor="let detail of invoiceDetailsRes">
+        <td>{{detail.partCode}}</td>
+        <td>{{detail.description}}</td>
+        <td>{{detail.partRate}}</td>
+        <td>{{detail.invoiceNumber}}</td>
+        <td>{{detail.replaceDate}}</td>
+        <td>{{detail.partLoc}}</td>
+        <td>{{detail.partQuantity}}</td>
+        <td>{{detail.partDiscount}}</td>
+        <td>{{detail.rateAdjust}}</td>
+        <td>{{detail.rebate}}</td>
+        <td>{{detail.termType}}</td>
+        <td>{{detail.invoiceDate}}</td>
+        <td>{{detail.companyName}}</td>
+
+      </tr>
+
+    </table>
+  </div>
+</div>
